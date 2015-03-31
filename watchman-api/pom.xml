@@ -7,6 +7,7 @@
 		<groupId>com.newtouch.watchman</groupId>
 		<artifactId>watchman-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../watchman-parent/pom.xml</relativePath>
 	</parent>
 	<artifactId>watchman-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
@@ -16,6 +17,10 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<dependencies>
+		<dependency>
+			<groupId>com.newtouch.lion</groupId>
+			<artifactId>com.newtouch.lion-api</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
