@@ -22,4 +22,12 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <modules>
+  	<module>watchman-api</module>
+  	<module>watchman-dao</module>
+  	<module>watchman-service</module>
+  	<module>watchman-web</module>
+  	<module>watchman-webapp</module>
+  	<module>watchman-parent</module>
+  </modules>
 </project>
