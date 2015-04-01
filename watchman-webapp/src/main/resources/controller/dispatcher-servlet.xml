@@ -16,6 +16,7 @@
 	<context:annotation-config />
 	<context:component-scan base-package="com.newtouch.lion.admin.web" />
 	<context:component-scan base-package="com.newtouch.lion.web" />
+	<context:component-scan base-package="com.newtouch.watchman.websocket"/>
 	<!-- Shiro MVC Start -->
 	<aop:config proxy-target-class="true"/>
 	<bean class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">
@@ -141,4 +142,7 @@
 			<value>jsonView</value>
 		</property>
 	</bean>
+	
+	<!-- WebSocket -->
+	<import resource="classpath:websocket/applicationContext-websocket.xml"/>
 </beans>
