@@ -18,6 +18,10 @@
 	</properties>
 	<dependencies>
 		<dependency>
+			<groupId>com.newtouch.lion</groupId>
+			<artifactId>com.newtouch.lion-service</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<scope>test</scope>
