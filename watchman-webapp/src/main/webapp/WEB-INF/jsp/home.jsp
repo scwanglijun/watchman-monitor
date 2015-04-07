@@ -24,7 +24,7 @@
   <script src="/watchman/assets/lib/jquery/jquery.js"></script>
   <script>
     //Create stomp client over sockJS protocol
-    var socket = new SockJS("/watchman/ws");
+    var socket = new SockJS("/watchman/watchman/ws/");
     var stompClient = Stomp.over(socket);
 	console.dir(stompClient);
     // Render price data from server into HTML, registered as callback

@@ -41,8 +41,8 @@ import com.newtouch.watchman.echarts.service.PieService;
 @Controller(value = "sysPieContorller")
 @RequestMapping("/echarts/")
 public class PieController extends AbstractController{
-	@Autowired
-	private PieService pieService;
+	//@Autowired
+	//private PieService pieService;
 	
 	private static final String INDEX_RETURN = "/echarts/pie";
 	
@@ -55,7 +55,8 @@ public class PieController extends AbstractController{
 	@RequestMapping(value = "getData")
 	@ResponseBody
 	public ModelAndView getData() {
-		List<Pie> list = pieService.findAll();
+		//List<Pie> list = pieService.findAll();
+		List<Pie>  list=new ArrayList<Pie>();
 		String str=JSONParser.toJSONString(list);
 		ModelAndView modelAndView=new ModelAndView();
 		return this.getStrJsonView(str, modelAndView);
@@ -64,7 +65,8 @@ public class PieController extends AbstractController{
 	@RequestMapping(value = "getName")
 	@ResponseBody
 	public ModelAndView getName() {
-		List<Pie> list = pieService.findAll();
+		//List<Pie> list = pieService.findAll();
+		List<Pie>  list=new ArrayList<Pie>();
 		List<String> namelist = new ArrayList<String>();
 		for(Pie pie:list){
 			namelist.add(pie.getName());

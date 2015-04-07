@@ -16,7 +16,7 @@ Author: wanglijun
 <!-- BEGIN HEAD -->
 <head>
 <meta charset="utf-8"/>
-<title>应用管理系统</title>
+<title>交易监控面板</title>
 <script src="${base}/resources/global/plugins/morris/morris.min.js" type="text/javascript"></script>
 <script src="${base}/resources/global/plugins/morris/raphael-min.js" type="text/javascript"></script>
 <script src="${base}/resources/global/plugins/jquery.sparkline.min.js" type="text/javascript"></script>
@@ -36,7 +36,7 @@ Author: wanglijun
 						<div class="display">
 							<div class="number">
 								<h3 class="font-green-sharp">7800<small class="font-green-sharp">$</small></h3>
-								<small>利润总额</small>
+								<small>总交易量</small>
 							</div>
 							<div class="icon">
 								<i class="icon-pie-chart"></i>
@@ -50,7 +50,7 @@ Author: wanglijun
 							</div>
 							<div class="status">
 								<div class="status-title">
-									 进度
+									成功率
 								</div>
 								<div class="status-number">
 									 76%
@@ -64,7 +64,7 @@ Author: wanglijun
 						<div class="display">
 							<div class="number">
 								<h3 class="font-red-haze">1349</h3>
-								<small>新反馈</small>
+								<small>失败交易数</small>
 							</div>
 							<div class="icon">
 								<i class="icon-like"></i>
@@ -78,7 +78,7 @@ Author: wanglijun
 							</div>
 							<div class="status">
 								<div class="status-title">
-									 更变
+									 失败率
 								</div>
 								<div class="status-number">
 									 85%
@@ -92,7 +92,7 @@ Author: wanglijun
 						<div class="display">
 							<div class="number">
 								<h3 class="font-blue-sharp">567</h3>
-								<small>新需求</small>
+								<small>慢交易数量</small>
 							</div>
 							<div class="icon">
 								<i class="icon-basket"></i>
@@ -106,7 +106,7 @@ Author: wanglijun
 							</div>
 							<div class="status">
 								<div class="status-title">
-									 扩展
+									延迟率
 								</div>
 								<div class="status-number">
 									 45%
@@ -120,7 +120,7 @@ Author: wanglijun
 						<div class="display">
 							<div class="number">
 								<h3 class="font-purple-soft">276</h3>
-								<small>新用户</small>
+								<small>监控工程</small>
 							</div>
 							<div class="icon">
 								<i class="icon-user"></i>
@@ -151,7 +151,7 @@ Author: wanglijun
 						<div class="portlet-title">
 							<div class="caption caption-md">
 								<i class="icon-bar-chart theme-font-color hide"></i>
-								<span class="caption-subject theme-font-color bold uppercase">销售汇总</span>
+								<span class="caption-subject theme-font-color bold uppercase">交易数量汇总</span>
 								<span class="caption-helper hide">每周统计数据...</span>
 							</div>
 							<div class="actions">
@@ -169,7 +169,7 @@ Author: wanglijun
 							<div class="row list-separated">
 								<div class="col-md-3 col-sm-3 col-xs-6">
 									<div class="font-grey-mint font-sm">
-										 总销售额
+										 总交易量
 									</div>
 									<div class="uppercase font-hg font-red-flamingo">
 										 13,760 <span class="font-lg font-grey-mint">$</span>
@@ -177,7 +177,7 @@ Author: wanglijun
 								</div>
 								<div class="col-md-3 col-sm-3 col-xs-6">
 									<div class="font-grey-mint font-sm">
-										 收益
+										成功交易量
 									</div>
 									<div class="uppercase font-hg theme-font-color">
 										 4,760 <span class="font-lg font-grey-mint">$</span>
@@ -185,7 +185,7 @@ Author: wanglijun
 								</div>
 								<div class="col-md-3 col-sm-3 col-xs-6">
 									<div class="font-grey-mint font-sm">
-										 成本
+										失败交易量
 									</div>
 									<div class="uppercase font-hg font-purple">
 										 11,760 <span class="font-lg font-grey-mint">$</span>
@@ -193,7 +193,7 @@ Author: wanglijun
 								</div>
 								<div class="col-md-3 col-sm-3 col-xs-6">
 									<div class="font-grey-mint font-sm">
-										 增长
+										交易成功率
 									</div>
 									<div class="uppercase font-hg font-blue-sharp">
 										 9,760 <span class="font-lg font-grey-mint">$</span>
@@ -203,7 +203,7 @@ Author: wanglijun
 							<ul class="list-separated list-inline-xs hide">
 								<li>
 									<div class="font-grey-mint font-sm">
-										 总销售额
+										 总交易量
 									</div>
 									<div class="uppercase font-hg font-red-flamingo">
 										 13,760 <span class="font-lg font-grey-mint">$</span>
@@ -252,7 +252,7 @@ Author: wanglijun
 						<div class="portlet-title">
 							<div class="caption caption-md">
 								<i class="icon-bar-chart theme-font-color hide"></i>
-								<span class="caption-subject theme-font-color bold uppercase">用户活跃度</span>
+								<span class="caption-subject theme-font-color bold uppercase">交易量分类汇总</span>
 								<span class="caption-helper hide">每周统计数据...</span>
 							</div>
 							<div class="actions">
