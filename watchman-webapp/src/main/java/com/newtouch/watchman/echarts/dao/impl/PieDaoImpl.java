@@ -10,6 +10,7 @@ package com.newtouch.watchman.echarts.dao.impl;
 import org.springframework.stereotype.Repository;
 
 import com.newtouch.lion.dao.impl.BaseDaoImpl;
+import com.newtouch.watchman.echarts.dao.PieDao;
 import com.newtouch.watchman.echarts.model.Pie;
 
 /**
@@ -29,8 +30,8 @@ import com.newtouch.watchman.echarts.model.Pie;
  * @author MaoJiaWei
  * @version 1.0
  */
-@Repository("pieDao")
-public class PieDaoImpl extends BaseDaoImpl<Pie,Long>{
+@Repository
+public class PieDaoImpl extends BaseDaoImpl<Pie,Long>  implements PieDao{
 
 	/**
 	 * 
