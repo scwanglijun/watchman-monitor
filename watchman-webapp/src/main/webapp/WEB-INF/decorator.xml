@@ -18,6 +18,13 @@
 		<pattern>/login.htm*</pattern>
 		<pattern>/test.htm</pattern>
 		<pattern>/stock/**</pattern>
+		<pattern>/ws</pattern>
+		<pattern>/ws/**</pattern>
+		<pattern>**/app/**</pattern>
+		<pattern>**/app/**</pattern>
+		<pattern>**/hello.htm</pattern>
+		<pattern>**/hello.htm</pattern>
+		<pattern>**/topic/greetings.htm</pattern>
 	</excludes>
 	
 	<!-- 主装饰器 -->

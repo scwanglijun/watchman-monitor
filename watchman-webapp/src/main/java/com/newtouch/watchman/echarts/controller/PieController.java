@@ -13,7 +13,9 @@ import java.util.List;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
+import com.newtouch.lion.json.JSONParser;
 import com.newtouch.lion.web.controller.AbstractController;
 import com.newtouch.watchman.echarts.utils.Option;
 import com.newtouch.watchman.echarts.utils.code.Orient;
@@ -42,6 +44,7 @@ import com.newtouch.watchman.echarts.utils.series.Pie;
 public class PieController extends AbstractController{
 //	@Autowired
 //	private PieService pieService;
+
 	
 	private static final String INDEX_RETURN = "/echarts/pie";
 	
@@ -51,54 +54,16 @@ public class PieController extends AbstractController{
 		return INDEX_RETURN;
 	}
 	
-//	@RequestMapping(value = "getData")
-//	@ResponseBody
-//	public List<Pie> getData() {
-//		List<Pie> list = new ArrayList<Pie>();
-//		Pie e1 = new Pie("直接访问",355);
-//		Pie e2 = new Pie("邮件营销",310);
-//		Pie e3 = new Pie("联盟广告",234);
-//		Pie e4 = new Pie("视频广告",135);
-//		Pie e5 = new Pie("搜索引擎",1548);
-//		list.add(e1);
-//		list.add(e2);
-//		list.add(e3);
-//		list.add(e4);
-//		list.add(e5);
-////		List<Pie> list = pieService.findAll();
-////		String str=JSONParser.toJSONString(list);
-////		ModelAndView modelAndView=new ModelAndView();
-////		return this.getStrJsonView(str, modelAndView);
-////		return null;
-//		return list;
-//	}
-//	
-//	@RequestMapping(value = "getName")
-//	@ResponseBody
-//	public List<String> getName() {
-////		List<Pie> list = pieService.findAll();
-//		List<Pie> list = new ArrayList<Pie>();
-//		Pie e1 = new Pie("直接访问",355);
-//		Pie e2 = new Pie("邮件营销",310);
-//		Pie e3 = new Pie("联盟广告",234);
-//		Pie e4 = new Pie("视频广告",135);
-//		Pie e5 = new Pie("搜索引擎",1548);
-//		list.add(e1);
-//		list.add(e2);
-//		list.add(e3);
-//		list.add(e4);
-//		list.add(e5);
-//		List<String> namelist = new ArrayList<String>();
-//		for(Pie pie:list){
-//			namelist.add(pie.getName());
-//		}
-//		return namelist;
-//		//String str=JSONParser.toJSONString(namelist);
-//		//ModelAndView modelAndView=new ModelAndView();
-//		//return this.getStrJsonView(str,modelAndView);
-////		return null;
-//	}
-	
+	@RequestMapping(value = "getData")
+	@ResponseBody
+	public ModelAndView getData() {
+		//List<Pie> list = pieService.findAll();
+		List<Pie>  list=new ArrayList<Pie>();
+		String str=JSONParser.toJSONString(list);
+		ModelAndView modelAndView=new ModelAndView();
+		return this.getStrJsonView(str, modelAndView);
+	}
+
 	@RequestMapping(value = "Options")
 	@ResponseBody
 	public Option Options(){

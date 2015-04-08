@@ -20,6 +20,12 @@
 		<dependency>
 			<groupId>com.newtouch.lion</groupId>
 			<artifactId>com.newtouch.lion-api</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>net.sf.ehcache.internal</groupId>
+					<artifactId>ehcache-terracotta-bootstrap</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
