@@ -44,10 +44,12 @@ import com.newtouch.watchman.websocket.model.Stock;
 @Controller
 @RequestMapping("/stock")
 public class HomeController {
-	@Autowired
-	private SimpMessagingTemplate template;
+
+	
 	private TaskScheduler scheduler = new ConcurrentTaskScheduler();
+	
 	private List<Stock> stockPrices = new ArrayList<Stock>();
+	
 	private Random rand = new Random(System.currentTimeMillis());
 
 	/**
@@ -63,7 +65,7 @@ public class HomeController {
 					+ (chgPct / 100.0 * stock.getPrice()));
 			stock.setTime(new Date());
 		}
-		template.convertAndSend("/topic/price", stockPrices);
+		//template.convertAndSend("/topic/price", stockPrices);
 	}
 
 	/**

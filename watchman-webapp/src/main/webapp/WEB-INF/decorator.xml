@@ -24,7 +24,9 @@
 		<pattern>**/app/**</pattern>
 		<pattern>**/hello.htm</pattern>
 		<pattern>**/hello.htm</pattern>
-		<pattern>**/topic/greetings.htm</pattern>
+		<pattern>**/hello/greetings.htm</pattern>
+		<pattern>/greeting/index.htm</pattern>
+		<pattern>/websocket.ws</pattern>
 	</excludes>
 	
 	<!-- 主装饰器 -->

@@ -2,8 +2,8 @@
 <html>
 <head>
     <title>Hello WebSocket</title>
-    <script src="/watchman/assets/lib/sockjs/sockjs.min.js"></script>
-    <script src="/watchman/assets/lib/stomp/lib/stomp.js"></script>
+    <script src="/watchman/resources/assets/lib/sockjs/sockjs.min.js"></script>
+    <script src="/watchman/resources/assets/lib/stomp/lib/stomp.js"></script>
     <script type="text/javascript">
         var stompClient = null;
         
@@ -15,12 +15,12 @@
         }
         
         function connect() {
-            var socket = new SockJS('/watchman/hello');
+            var socket = new SockJS('/watchman/hello.htm');
             stompClient = Stomp.over(socket);            
             stompClient.connect({}, function(frame) {
                 setConnected(true);
                 console.log('Connected: ' + frame);
-                stompClient.subscribe('/watchman/topic/greetings', function(greeting){
+                stompClient.subscribe('/watchman/topic/greetings.htm', function(greeting){
                     showGreeting(JSON.parse(greeting.body).content);
                 });
             });
