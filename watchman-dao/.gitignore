@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 /target
 /.classpath
 /.project
 /.springBeans
+=======
+/target
+/.classpath
+/.project
+>>>>>>> branch 'master' of git@github.com:scwanglijun/watchman-monitor

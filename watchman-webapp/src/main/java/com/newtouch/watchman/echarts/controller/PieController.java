@@ -10,7 +10,6 @@ package com.newtouch.watchman.echarts.controller;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -18,8 +17,10 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.newtouch.lion.json.JSONParser;
 import com.newtouch.lion.web.controller.AbstractController;
-import com.newtouch.watchman.echarts.model.Pie;
-import com.newtouch.watchman.echarts.service.PieService;
+import com.newtouch.watchman.echarts.utils.Option;
+import com.newtouch.watchman.echarts.utils.code.Orient;
+import com.newtouch.watchman.echarts.utils.code.SeriesType;
+import com.newtouch.watchman.echarts.utils.series.Pie;
 
 /**
  * <p>
@@ -41,8 +42,9 @@ import com.newtouch.watchman.echarts.service.PieService;
 @Controller(value = "sysPieContorller")
 @RequestMapping("/echarts/")
 public class PieController extends AbstractController{
-	//@Autowired
-	//private PieService pieService;
+//	@Autowired
+//	private PieService pieService;
+
 	
 	private static final String INDEX_RETURN = "/echarts/pie";
 	
@@ -61,21 +63,41 @@ public class PieController extends AbstractController{
 		ModelAndView modelAndView=new ModelAndView();
 		return this.getStrJsonView(str, modelAndView);
 	}
-	
-	@RequestMapping(value = "getName")
+
+	@RequestMapping(value = "Options")
 	@ResponseBody
-	public ModelAndView getName() {
-		//List<Pie> list = pieService.findAll();
-		List<Pie>  list=new ArrayList<Pie>();
+	public Option Options(){
+		List<Stu> list = new ArrayList<Stu>();
+		Stu e1 = new Stu("直接访问",355);
+		Stu e2 = new Stu("邮件营销",310);
+		Stu e3 = new Stu("联盟广告",234);
+		Stu e4 = new Stu("视频广告",135);
+		Stu e5 = new Stu("搜索引擎",1548);
+		list.add(e1);
+		list.add(e2);
+		list.add(e3);
+		list.add(e4);
+		list.add(e5);
 		List<String> namelist = new ArrayList<String>();
-		for(Pie pie:list){
+		for(Stu pie:list){
 			namelist.add(pie.getName());
 		}
-		String str=JSONParser.toJSONString(namelist);
-		ModelAndView modelAndView=new ModelAndView();
-		return this.getStrJsonView(str, modelAndView);
+	    Option option = new Option();
+	    option.title().text("xxx站点用户访问来源");
+	    option.title().x("center");
+	    option.legend().orient(Orient.vertical);
+	    option.legend().x("left");
+	    option.legend().data(namelist);
+	    option.calculable(true);
+	    Pie pie = new Pie();
+	    pie.name("访问来源");
+	    pie.type(SeriesType.pie);
+	    pie.radius("55%");
+	    pie.center("50%", "60%");
+	    pie.data(list);
+	    option.series(pie);
+		return option;
 	}
-	
 }
 
 	
